@@ -29,3 +29,10 @@ steps:
     feedsToUse: 'select'
     packagesToPack: './src/OpenCqrs.Store.InMemory.csproj'
     versioningScheme: 'byBuildNumber'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'push'
+    feedsToUse: 'select'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
+    nuGetFeedType: 'external'
+    versioningScheme: 'off'
