@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>OpenCqrs.Store.InMemory</AssemblyName>
+    <PackageId>AndreuJuanC.OpenCqrs.Store.InMemory</PackageId>
+    <Authors>Juan Carlos Andreu</Authors>
+    <Product>AndreuJuanC.OpenCqrs.Store.InMemory</Product>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
