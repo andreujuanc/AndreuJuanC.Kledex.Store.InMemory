@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenCqrs.Store.InMemory", "OpenCqrs.Store.InMemory.csproj", "{49B0A992-4378-411F-9CD7-478848209FB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCqrs.Store.InMemory.Test", "..\OpenCqrs.Store.InMemory.Test\OpenCqrs.Store.InMemory.Test.csproj", "{1864AE3A-E626-4128-963D-B976FA6B2C7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49B0A992-4378-411F-9CD7-478848209FB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49B0A992-4378-411F-9CD7-478848209FB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49B0A992-4378-411F-9CD7-478848209FB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49B0A992-4378-411F-9CD7-478848209FB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1864AE3A-E626-4128-963D-B976FA6B2C7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1864AE3A-E626-4128-963D-B976FA6B2C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1864AE3A-E626-4128-963D-B976FA6B2C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1864AE3A-E626-4128-963D-B976FA6B2C7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7858B8FA-021A-494E-A439-64B9FFF6DF7E}
+	EndGlobalSection
+EndGlobal
