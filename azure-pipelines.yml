@@ -27,7 +27,7 @@ steps:
   inputs:
     command: 'pack'
     feedsToUse: 'select'
-    packagesToPack: './src/OpenCqrs.Store.InMemory.csproj'
+    packagesToPack: './src/AndreuJuanC.OpenCqrs.Store.InMemory.csproj'
     versioningScheme: 'byBuildNumber'
 - task: NuGetCommand@2
   inputs:
