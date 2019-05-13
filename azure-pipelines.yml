@@ -10,5 +10,15 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: dotnet build ./src
-  displayName: 'Run a one-line script'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+    projects: './tests'
+    feedsToUse: 'select'
+    versioningScheme: 'off'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'pack'
+    feedsToUse: 'select'
+    packagesToPack: '/src/OpenCqrs.Store.InMemory.csproj'
+    versioningScheme: 'byBuildNumber'
