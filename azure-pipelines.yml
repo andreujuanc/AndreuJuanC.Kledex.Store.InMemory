@@ -15,15 +15,17 @@ pool:
 
 steps:
 - task: DotNetCoreCLI@2
+  displayName: 'Dotnet test'
   inputs:
     command: 'test'
-    projects: './tests'
+    projects: './OpenCqrs.Store.InMemory.Test'
     feedsToUse: 'select'
     versioningScheme: 'off'
     
 - task: DotNetCoreCLI@2
+  displayName: 'Dotnet pack'
   inputs:
     command: 'pack'
     feedsToUse: 'select'
-    packagesToPack: '/src/OpenCqrs.Store.InMemory.csproj'
+    packagesToPack: './src/OpenCqrs.Store.InMemory.csproj'
     versioningScheme: 'byBuildNumber'
