@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 
 namespace OpenCqrs.Store.InMemory
 {
-    public class InMemoryStore :  ICommandStore, IEventStore
+    public class InMemoryStore :  ICommandStore, IEventStore, IAggregateStore
     {
 
         private List<CommandDocument> Commands { get; } = new List<CommandDocument>();
         private List<AggregateDocument> Aggregates { get; } = new List<AggregateDocument>();
+        private List<AggregateStoreModel> AggregateStore { get; } = new List<AggregateStoreModel>();
+
         private List<EventDocument> Events { get; } = new List<EventDocument>();
         private readonly IVersionService VersionService;
 
@@ -123,6 +125,40 @@ namespace OpenCqrs.Store.InMemory
                 var aggregateDocument = new AggregateDocument(id: AggregateRootId, type: typeof(TAggregate).AssemblyQualifiedName);
                 Aggregates.Add(aggregateDocument);
             }
+        }
+
+        public Task SaveAggregateAsync<TAggregate>(Guid id) where TAggregate : IAggregateRoot
+        {
+            SaveAggregate< TAggregate>(id);
+            return Task.CompletedTask;
+        }
+
+        public void SaveAggregate<TAggregate>(Guid id) where TAggregate : IAggregateRoot
+        {
+            var aggregate = AggregateStore.Where(x => x.Id == id).FirstOrDefault();
+            if (aggregate == null)
+            {
+                aggregate = new AggregateStoreModel
+                {
+                    Id = id,
+                    Type = typeof(TAggregate).AssemblyQualifiedName
+                };
+                AggregateStore.Add(aggregate);
+            }
+            else
+            {
+                AggregateStore.Remove(aggregate);
+            }
+        }
+
+        public Task<IEnumerable<AggregateStoreModel>> GetAggregatesAsync()
+        {
+            return Task.FromResult(GetAggregates());
+        }
+
+        public IEnumerable<AggregateStoreModel> GetAggregates()
+        {
+            return AggregateStore.ToList();
         }
     }
 }

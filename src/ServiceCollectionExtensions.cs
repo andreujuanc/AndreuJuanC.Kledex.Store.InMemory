@@ -21,8 +21,11 @@ namespace OpenCqrs.Store.InMemory
             var store = new InMemoryStore(new VersionService());// todo
             var busdistpacher = new InMemoryBusMessageDispatcher();
 
-            builder.Services.AddSingleton<IEventStore>((sp) => store);
-            builder.Services.AddSingleton<ICommandStore>((sp) => store);
+            builder.Services
+              .AddTransient<IAggregateStore>((sp) => store)
+              .AddTransient<ICommandStore>((sp) => store)
+              .AddTransient<IEventStore>((sp) => store);
+
             builder.Services.AddSingleton<IBusMessageDispatcher>((sp) => busdistpacher);
             builder.Services.AddSingleton<IResolver, Resolver>();
             

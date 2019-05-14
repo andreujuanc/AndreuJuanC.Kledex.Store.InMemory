@@ -6,6 +6,8 @@
     <PackageId>AndreuJuanC.OpenCqrs.Store.InMemory</PackageId>
     <Authors>Juan Carlos Andreu</Authors>
     <Product>AndreuJuanC.OpenCqrs.Store.InMemory</Product>
+    <Description>OpenCQRS In-Memory provider without EF or any other dependency.
+Used for integration tests mostly</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
