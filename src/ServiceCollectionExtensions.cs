@@ -30,10 +30,10 @@ namespace Kledex.Store.InMemory
             builder.Services.AddSingleton<IResolver, Resolver>();
             
 
-            builder.Services.Scan(s => s
-                .FromAssembliesOf(typeof(InMemoryStore))
-                .AddClasses()
-                .AsImplementedInterfaces());
+            //builder.Services.Scan(s => s
+            //    .FromAssembliesOf(typeof(InMemoryStore))
+            //    .AddClasses()
+            //    .AsImplementedInterfaces());
 
             return builder;
         }

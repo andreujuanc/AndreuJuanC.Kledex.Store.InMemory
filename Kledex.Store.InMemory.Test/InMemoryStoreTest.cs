@@ -4,17 +4,17 @@ using Kledex.Commands;
 using Kledex.Domain;
 using Kledex.Events;
 using Kledex.Queries;
-using Kledex.Tests.Fakes;
 using System;
 using System.Threading.Tasks;
 using Xunit;
+using Kledex.Examples.Domain;
 
 namespace Kledex.Store.InMemory.Test
 {
-    public class DispatcherWithInMemory
+    public class InMemoryStoreTest
     {
         readonly InMemoryStore sut = null;
-        public DispatcherWithInMemory()
+        public InMemoryStoreTest()
         {
             var versionService = new VersionService();
             sut = new InMemoryStore(versionService);
@@ -25,10 +25,9 @@ namespace Kledex.Store.InMemory.Test
         {
             var id = Guid.NewGuid();
             Assert.Empty(sut.GetAggregates());
-            sut.SaveAggregate< Aggregate>(id);
+            await sut.SaveAggregateAsync<Product>(id);
             var list = sut.GetAggregates();
             Assert.Contains(list, x => x.Id == id);
         }
-
     }
 }

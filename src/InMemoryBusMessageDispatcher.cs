@@ -6,9 +6,9 @@ namespace Kledex.Store.InMemory
 {
     public class InMemoryBusMessageDispatcher : IBusMessageDispatcher
     {
-        public Task DispatchAsync<TMessage>(TMessage message) where TMessage : IBusMessage
+        public async Task DispatchAsync<TMessage>(TMessage message) where TMessage : IBusMessage
         {
-            throw new NotImplementedException();
+            
         }
     }
 }    
