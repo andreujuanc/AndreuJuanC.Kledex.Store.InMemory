@@ -3,7 +3,7 @@ name: $(Major).$(Minor).$(rev:r)
 
 variables:
   Major: 1
-  Minor: 0
+  Minor: 1
   ProjectName: 'andreujuanc.AndreuJuanC.Kledex.Store.InMemory'
   BuildConfiguration: 'Release'
 
