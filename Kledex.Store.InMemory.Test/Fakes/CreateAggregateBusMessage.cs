@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using OpenCqrs.Bus;
-using OpenCqrs.Domain;
+using Kledex.Bus;
+using Kledex.Domain;
 
-namespace OpenCqrs.Tests.Fakes
+namespace Kledex.Tests.Fakes
 {
     public class CreateAggregateBusMessage : DomainCommand, IBusQueueMessage
     {

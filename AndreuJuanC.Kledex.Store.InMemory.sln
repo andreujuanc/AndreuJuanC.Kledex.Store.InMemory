@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreuJuanC.OpenCqrs.Store.InMemory", "AndreuJuanC.OpenCqrs.Store.InMemory.csproj", "{49B0A992-4378-411F-9CD7-478848209FB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreuJuanC.Kledex.Store.InMemory", "src/AndreuJuanC.Kledex.Store.InMemory.csproj", "{49B0A992-4378-411F-9CD7-478848209FB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCqrs.Store.InMemory.Test", "..\OpenCqrs.Store.InMemory.Test\OpenCqrs.Store.InMemory.Test.csproj", "{1864AE3A-E626-4128-963D-B976FA6B2C7D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kledex.Store.InMemory.Test", "Kledex.Store.InMemory.Test\Kledex.Store.InMemory.Test.csproj", "{1864AE3A-E626-4128-963D-B976FA6B2C7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

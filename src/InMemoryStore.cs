@@ -1,12 +1,12 @@
 ﻿using Newtonsoft.Json;
-using OpenCqrs.Domain;
-using OpenCQRS.Store.InMemory.Documents;
+using Kledex.Domain;
+using Kledex.Store.InMemory.Documents;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace OpenCqrs.Store.InMemory
+namespace Kledex.Store.InMemory
 {
     public class InMemoryStore :  ICommandStore, IEventStore, IAggregateStore
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OpenCQRS.Store.InMemory.Documents
+namespace Kledex.Store.InMemory.Documents
 {
     public class EventDocument
     {

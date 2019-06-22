@@ -4,7 +4,7 @@ name: $(Major).$(Minor).$(rev:r)
 variables:
   Major: 1
   Minor: 0
-  ProjectName: 'andreujuanc.AndreuJuanC.OpenCqrs.Store.InMemory'
+  ProjectName: 'andreujuanc.AndreuJuanC.Kledex.Store.InMemory'
   BuildConfiguration: 'Release'
 
 trigger:
@@ -18,7 +18,7 @@ steps:
   displayName: 'Dotnet test'
   inputs:
     command: 'test'
-    projects: './OpenCqrs.Store.InMemory.Test'
+    projects: './Kledex.Store.InMemory.Test'
     feedsToUse: 'select'
     versioningScheme: 'off'
     
@@ -27,7 +27,7 @@ steps:
   inputs:
     command: 'pack'
     feedsToUse: 'select'
-    packagesToPack: './src/AndreuJuanC.OpenCqrs.Store.InMemory.csproj'
+    packagesToPack: './src/AndreuJuanC.Kledex.Store.InMemory.csproj'
     versioningScheme: 'byBuildNumber'
 - task: NuGetCommand@2
   inputs:

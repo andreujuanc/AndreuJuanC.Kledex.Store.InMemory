@@ -1,8 +1,8 @@
-﻿using OpenCqrs.Bus;
+﻿using Kledex.Bus;
 using System;
 using System.Threading.Tasks;
 
-namespace OpenCqrs.Store.InMemory
+namespace Kledex.Store.InMemory
 {
     public class InMemoryBusMessageDispatcher : IBusMessageDispatcher
     {

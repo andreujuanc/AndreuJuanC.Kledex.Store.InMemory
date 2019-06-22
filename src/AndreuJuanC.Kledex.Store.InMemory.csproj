@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <AssemblyName>AndreuJuanC.OpenCqrs.Store.InMemory</AssemblyName>
-    <PackageId>AndreuJuanC.OpenCqrs.Store.InMemory</PackageId>
+    <AssemblyName>AndreuJuanC.Kledex.Store.InMemory</AssemblyName>
+    <PackageId>AndreuJuanC.Kledex.Store.InMemory</PackageId>
     <Authors>Juan Carlos Andreu</Authors>
-    <Product>AndreuJuanC.OpenCqrs.Store.InMemory</Product>
-    <Description>OpenCQRS In-Memory provider without EF or any other dependency.
+    <Product>AndreuJuanC.Kledex.Store.InMemory</Product>
+    <Description>Kledex In-Memory provider without EF or any other dependency.
 Used for integration tests mostly</Description>
   </PropertyGroup>
 
@@ -15,7 +15,7 @@ Used for integration tests mostly</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OpenCqrs" Version="6.1.0" />
+    <PackageReference Include="Kledex" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

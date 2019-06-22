@@ -1,16 +1,16 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using OpenCqrs.Bus;
-using OpenCqrs.Dependencies;
-using OpenCqrs.Domain;
-using OpenCqrs.Extensions;
+using Kledex.Bus;
+using Kledex.Dependencies;
+using Kledex.Domain;
+using Kledex.Extensions;
 using System;
 
-namespace OpenCqrs.Store.InMemory
+namespace Kledex.Store.InMemory
 {
     public static class ServiceCollectionExtensions
     {
-        public static IOpenCqrsServiceBuilder AddInMemoryProvider(this IOpenCqrsServiceBuilder builder, IConfiguration configuration)
+        public static IKledexServiceBuilder AddInMemoryProvider(this IKledexServiceBuilder builder, IConfiguration configuration)
         {
             if (builder == null)
                 throw new ArgumentNullException(nameof(builder));

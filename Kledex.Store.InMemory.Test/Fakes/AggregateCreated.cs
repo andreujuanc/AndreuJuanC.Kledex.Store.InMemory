@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using OpenCqrs.Bus;
-using OpenCqrs.Events;
+using Kledex.Bus;
+using Kledex.Domain;
 
-namespace OpenCqrs.Tests.Fakes
+namespace Kledex.Tests.Fakes
 {
-    public class SomethingCreated : Event, IBusQueueMessage
+    public class AggregateCreated : DomainEvent, IBusQueueMessage
     {
         public DateTime? ScheduledEnqueueTimeUtc { get; set; }
         public string QueueName { get; set; } = "queue-name";

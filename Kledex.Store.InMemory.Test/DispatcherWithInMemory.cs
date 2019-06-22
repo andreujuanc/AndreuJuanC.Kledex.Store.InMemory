@@ -1,15 +1,15 @@
 using Moq;
-using OpenCqrs.Bus;
-using OpenCqrs.Commands;
-using OpenCqrs.Domain;
-using OpenCqrs.Events;
-using OpenCqrs.Queries;
-using OpenCqrs.Tests.Fakes;
+using Kledex.Bus;
+using Kledex.Commands;
+using Kledex.Domain;
+using Kledex.Events;
+using Kledex.Queries;
+using Kledex.Tests.Fakes;
 using System;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace OpenCqrs.Store.InMemory.Test
+namespace Kledex.Store.InMemory.Test
 {
     public class DispatcherWithInMemory
     {
